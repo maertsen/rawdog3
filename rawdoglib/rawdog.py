@@ -41,7 +41,7 @@ from feedparser.sanitizer import _HTMLSanitizer as HTMLSanitizer
 
 import rawdoglib.feedscanner
 from rawdoglib.persister import Persistable, Persister
-from rawdoglib.plugins import Box, call_hook
+from rawdoglib.plugins import Box, call_hook, load_plugins
 
 try:
     import tidylib
