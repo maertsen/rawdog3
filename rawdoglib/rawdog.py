@@ -18,6 +18,7 @@ import calendar
 import getopt
 import hashlib
 import locale
+import operator
 import os
 import re
 import socket
@@ -1496,7 +1497,7 @@ __feeditems__
 
         feeds = [(feed.get_html_name(config).lower(), feed)
                  for feed in list(self.feeds.values())]
-        feeds.sort()
+        feeds.sort(key=operator.itemgetter(0))
 
         feeditems = StringIO()
         for key, feed in feeds:
