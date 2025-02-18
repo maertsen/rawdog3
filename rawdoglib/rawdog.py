@@ -462,7 +462,7 @@ class Feed:
         # can't assume that p contains any particular field.
 
         responses = p.get("rawdog_responses")
-        if len(responses) > 0:
+        if responses is not None and len(responses) > 0:
             last_status = responses[-1]["status"]
         elif len(p.get("feed", [])) != 0:
             # Some protocol other than HTTP -- assume it's OK,
